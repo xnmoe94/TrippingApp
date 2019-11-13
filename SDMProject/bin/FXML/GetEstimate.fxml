@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="323.0" prefWidth="636.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GetEstimateController">
+   <children>
+      <ImageView fitHeight="237.0" fitWidth="636.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/Image.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="UberX" layoutX="50.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#ClickUberX" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #6807f9;" styleClass="6807f96807f9" text="HAIL UBER X" textFill="WHITE" />
+      <Button fx:id="Lyft" layoutX="248.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#Lyftbtn" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #6807f9;" styleClass="6807f96807f9" text="HAIL LYFT" textFill="WHITE" />
+      <Button fx:id="Taxi" layoutX="450.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#Taxibtn" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #6807f9;" styleClass="6807f96807f9" text="CALL TAXI" textFill="WHITE" />
+   </children>
+</AnchorPane>

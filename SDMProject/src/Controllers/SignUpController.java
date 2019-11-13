@@ -61,6 +61,8 @@ public class SignUpController implements Initializable {
     }
     
    
+    
+   
     @FXML
     void SignUpclicked(MouseEvent event) throws SQLException {
     	
@@ -70,9 +72,9 @@ public class SignUpController implements Initializable {
     	 try {
              String st = "INSERT INTO ADMINS ( EMAIL, PASSWORD, USERNAME) VALUES (?,?,?)";
              preparedStatement = (PreparedStatement) con.prepareStatement(st);
-             preparedStatement.setString(1, TxtFieldUsername.getText());
-             preparedStatement.setString(2, TxtFieldEmail.getText());
-             preparedStatement.setString(3, PasswordField.getText());
+             preparedStatement.setString(1, TxtFieldEmail.getText());
+             preparedStatement.setString(2, PasswordField.getText());
+             preparedStatement.setString(3, TxtFieldUsername.getText());
              
 
              preparedStatement.executeUpdate();

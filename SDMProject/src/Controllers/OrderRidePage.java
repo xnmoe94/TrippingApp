@@ -45,6 +45,23 @@ public class OrderRidePage implements Initializable {
 
 
     }
+    
+    
+    @FXML
+    void NextClick(MouseEvent event) {
+    	
+    	try {
+		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/AnotherPage.fxml"));
+		            Parent root = (Parent) fxmlLoader.load();
+		            Stage stage = new Stage();
+		            stage.setScene(new Scene(root));  
+		            stage.show();
+		           
+		    } catch(Exception e) {
+		       e.printStackTrace();
+		      }
+
+    }
 
     @FXML
     void HomePage(MouseEvent event) {

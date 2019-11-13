@@ -9,7 +9,7 @@
    <children>
       <ImageView fitHeight="237.0" fitWidth="636.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Desktop/Image.png" />
+            <Image url="@../../../../../Desktop/Screen%20Shot%202019-11-13%20at%201.56.00%20PM.png" />
          </image>
       </ImageView>
       <Button fx:id="UberX" layoutX="50.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#ClickUberX" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #6807f9;" styleClass="6807f96807f9" text="HAIL UBER X" textFill="WHITE" />

@@ -71,9 +71,13 @@ public class OrderRidePage implements Initializable {
 		            Stage stage = new Stage();
 		            stage.setScene(new Scene(root));  
 		            stage.show();
+		            
+		            //stage.close();
+		            
 		           
 		    } catch(Exception e) {
 		       e.printStackTrace();
+		       
 		      }
 
     }

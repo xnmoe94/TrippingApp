@@ -22,6 +22,19 @@ import javafx.stage.Stage;
 import Utils.ConnectionUtil;
 
 public class LoginController implements Initializable {
+	
+	
+	
+	
+	
+	
+	 @FXML
+	    private Button btnadminLogin;
+	
+	
+	
+	
+	
 	  @FXML
 	  void btnSignUp(MouseEvent event) throws IOException {
 			try {
@@ -139,6 +152,24 @@ public class LoginController implements Initializable {
         lblErrors.setTextFill(color);
         lblErrors.setText(text);
         System.out.println(text);
+    }
+    
+    @FXML
+    void adminLogin(MouseEvent event) throws IOException{
+		
+		try {
+		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/AdminPage.fxml"));
+		            Parent root = (Parent) fxmlLoader.load();
+		            Stage stage = new Stage();
+		            stage.setScene(new Scene(root));  
+		            stage.show();
+		           
+		    } catch(Exception e) {
+		       e.printStackTrace();
+		      }
+		
+		
+
     }
 }
 

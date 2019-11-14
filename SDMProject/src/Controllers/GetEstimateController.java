@@ -31,7 +31,7 @@ public class GetEstimateController implements Initializable {
     void ClickUberX(MouseEvent event) {
     	
     	try {
-            Desktop.getDesktop().browse(new URI("https://www.uber.com/global/en/sign-in/"));
+            Desktop.getDesktop().browse(new URI("https://auth.uber.com/login/?breeze_local_zone=dca1&next_url=https%3A%2F%2Fm.uber.com%2F%3F_ga%3D2.108837127.463331527.1573675166-614735462.1573529715&state=wiKXyn0ZRuRTcbf8-x5O37ZcRyQ47S8wkMSeEihfH2Q%3D"));
         } catch (IOException e1) {
             e1.printStackTrace();
         } catch (URISyntaxException e1) {

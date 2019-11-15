@@ -158,7 +158,7 @@ public class LoginController implements Initializable {
     void adminLogin(MouseEvent event) throws IOException{
 		
 		try {
-		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/AdminPage.fxml"));
+		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/Admin.fxml"));
 		            Parent root = (Parent) fxmlLoader.load();
 		            Stage stage = new Stage();
 		            stage.setScene(new Scene(root));  

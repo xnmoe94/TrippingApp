@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminSignin">
+   <children>
+      <AnchorPane prefHeight="421.0" prefWidth="347.0">
+         <children>
+            <TextField fx:id="Usernametxt" layoutX="55.0" layoutY="161.0" prefHeight="33.0" prefWidth="224.0" promptText="Username" />
+            <Button fx:id="signbttn" layoutX="114.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#signinn" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: blue;" text="Sign In" textFill="WHITE" />
+            <Button fx:id="signupbttn" layoutX="63.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#signupbtnn" prefHeight="27.0" prefWidth="217.0" style="-fx-background-color: blue;" text="New Admin? Register here" textFill="WHITE" />
+            <PasswordField fx:id="Passwordtxt" layoutX="55.0" layoutY="211.0" prefHeight="33.0" prefWidth="224.0" promptText="Password" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

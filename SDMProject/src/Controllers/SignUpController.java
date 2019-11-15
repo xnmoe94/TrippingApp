@@ -79,13 +79,7 @@ public class SignUpController implements Initializable {
 
              preparedStatement.executeUpdate();
              
-             
-             
-                   
-            
-
-           
-           
+ 
 
          } catch (SQLException ex) {
              System.out.println(ex.getMessage());

@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import Utils.ConnectionUtil;
@@ -26,12 +27,57 @@ public class OrderRidePage implements Initializable {
 
     @FXML
     private TextField txtStartLocation;
+    
+    @FXML
+    private TextField txtEndLocation;
+    
+    @FXML
+    private Button SignoutButton;
 
+    @FXML
+    private Pane CustomerName;
+    
+    @FXML
+    private TextField Customername;
+    
     @FXML
     private Button btnGetestimate;
     
+    Connection con = null;
+    PreparedStatement preparedStatement = null;
+    ResultSet resultSet = null;
+    
+    public OrderRidePage() {
+        con = ConnectionUtil.conDB();
+    }
+    
+   
+    
     @FXML
     void GetEstimate(MouseEvent event) {
+    	
+    	
+    	
+    	   
+    	
+   	 try {
+            String st = "INSERT INTO rides (CustomerName, StartLocation, EndLocation) VALUES (?,?,?)";
+            preparedStatement = (PreparedStatement) con.prepareStatement(st);
+            preparedStatement.setString(2, txtStartLocation.getText());
+            preparedStatement.setString(3, txtEndLocation.getText());
+            preparedStatement.setString(1, Customername.getText());
+           
+
+            preparedStatement.executeUpdate();
+            
+
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+           
+           
+        }
+            
     	try {
 		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/GetEstimate.fxml"));
 		            Parent root = (Parent) fxmlLoader.load();
@@ -65,11 +111,18 @@ public class OrderRidePage implements Initializable {
 
     @FXML
     void HomePage(MouseEvent event) {
+    	
+    	
+    	
+        
+        
     	try {
 		    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML/Login.fxml"));
 		            Parent root = (Parent) fxmlLoader.load();
 		            Stage stage = new Stage();
-		            stage.setScene(new Scene(root));  
+		            stage.setScene(new Scene(root));
+		            stage =(Stage) SignoutButton.getScene().getWindow();
+		            stage.close();
 		            stage.show();
 		            
 		            //stage.close();
@@ -79,6 +132,8 @@ public class OrderRidePage implements Initializable {
 		       e.printStackTrace();
 		       
 		      }
+    	
+    	
 
     }
 

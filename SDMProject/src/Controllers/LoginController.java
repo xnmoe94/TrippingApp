@@ -67,6 +67,8 @@ public class LoginController implements Initializable {
 
     @FXML
     private Button btnSignin;
+    
+    
 
     /// -- 
     Connection con = null;
